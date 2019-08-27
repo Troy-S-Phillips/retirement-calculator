@@ -42,7 +42,6 @@ def StockCalculation(SBalance,SYear,AYears):
         if StocksBalance < 100000 or BondsBalance < 100000:
             DisplayResult = "There will be less than $100,000 in your bonds account and stock account at the beginning of "+ str(YearStart)
             return DisplayResult
-        #print(YearStart,StocksBalance,BondsBalance) #Will be removed when turned into function
 
     Result = "If you start withdrawing $100k per year at "+ str(StartingYear) + " for "+ str(AmountOfYears) + " years you will have " + str(locale.currency(float(np.round(StocksBalance,2)), grouping = True)) + " in your stock account and " + str(locale.currency(float(np.round(BondsBalance,2)), grouping = True)) + " in your bonds account."
     DisplayResult = re.sub("\[ |]","",Result)
