@@ -1,0 +1,40 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+
+ <html>
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type=text/javascript>
+            $(function() {
+                $('a#process_input').bind('click', function() {
+                $.getJSON('/_background_process', {
+                    amount: $('input[name="amount"]').val(),
+                    beginning: $('input[name="beginning"]').val(),
+                    years: $('input[name="years"]').val()
+                }, function(data) {
+                    $("#result").text(data.result);
+                });
+                return false;
+                });
+            });
+        </script>
+    </head>
+    
+    <body>
+        <div>
+        <h1>Retirement Funds Calculator</h1>
+            <form>
+                Amount you would like to start with in your Stocks account and Bonds account (Do not insert special characters):<br>
+                <input type="text" name="amount">
+                <br>
+                Year you would like to start drawing from retirement funds (must be after 1927):<br>
+                <input type="text" name="beginning">
+                <br>
+                For how many years would you like to draw from your retirment funds (must end before 2019):<br>
+                <input type="text" name="years">
+                <br>
+                <a href=# id=process_input><button class='button-primary'>Calculate</button></a>
+            </form>
+        <p id=result></p>
+        </div>
+    </body>
+</html>
