@@ -38,7 +38,17 @@
             {
                 "type": "file",
                 "source": "/home/ubuntu/RetirementWebsite/",
-                "destination": "/home/ubuntu/RetirementWebsite"
+                "destination": "/tmp"
+            },
+            {
+                "type": "shell",
+                "inline":[
+                    "sudo mv /tmp/Dockerfile /home/ubuntu/RetirementWebsite/",
+                    "sudo mv /tmp/Stocks.py /home/ubuntu/RetirementWebsite/",
+                    "sudo mv /tmp/app.py /home/ubuntu/RetirementWebsite/",
+                    "sudo mv /tmp/histretSP.xlsx /home/ubuntu/RetirementWebsite/",
+                    "sudo mv /tmp/templates /home/ubuntu/RetirementWebsite/"
+                ]
             }
         ]
 }
