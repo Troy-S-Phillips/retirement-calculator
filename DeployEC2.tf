@@ -1,4 +1,4 @@
-#Creating environment variables to run script
+#Create environment variables to run script
 #export TF_VAR_AWSAccessKey= (Insert Access Key Here)
 #export TF_VAR_AWSSecretKey= (Insert Secret Key Here)
 #export TF_VAR_region=us-west-1
@@ -11,7 +11,7 @@ resource "aws_security_group" "allow_me_ssh" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks =  #Add my IP address here such as ["174.134.63.71/32"]
+    cidr_blocks =  #Add my IP address here such as ["174.114.60.31/32"]
     }
 
   egress {
